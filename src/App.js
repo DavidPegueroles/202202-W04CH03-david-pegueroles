@@ -1,10 +1,11 @@
-import Display from "./components/Display/Display";
+import Actions from "./components/Actions/Actions";
 import Info from "./components/Info/Info";
 
 function App() {
   return (
     <>
       <div className="container">
+        {/* <!-- El siguiente elemento se oculta añadiéndole la clase "off" --> */}
         <Info />
         <main className="phone">
           <div className="keyboard-container">
@@ -44,18 +45,7 @@ function App() {
               </li>
             </ol>
           </div>
-          <div className="actions">
-            {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
-            <Display />
-            {/* <!-- el número de teléfono tiene 9 cifras --> */}
-            <a href="#" className="call">
-              Call
-            </a>
-            {/* <!-- Sólo se tiene que ver un botón u otro --> */}
-            <a href="#" className="hang active">
-              Hang
-            </a>
-          </div>
+          <Actions />
         </main>
       </div>
     </>
