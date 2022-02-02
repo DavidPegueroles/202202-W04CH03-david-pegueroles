@@ -1,3 +1,4 @@
+import Display from "./components/Display/Display";
 import Info from "./components/Info/Info";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           </div>
           <div className="actions">
             {/* <!-- El botón de llamar debe tener la clase "activo" cuando --> */}
+            <Display />
             {/* <!-- el número de teléfono tiene 9 cifras --> */}
             <a href="#" className="call">
               Call
