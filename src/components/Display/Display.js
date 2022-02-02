@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import DialingContext from "../../contexts/DialingContext";
+
 const Display = () => {
-  return <span className="number">667359961</span>;
+  const { dialedNumbers } = useContext(DialingContext);
+  return <span className="number">{dialedNumbers}</span>;
 };
 
 export default Display;
