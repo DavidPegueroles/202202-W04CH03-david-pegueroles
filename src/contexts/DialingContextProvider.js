@@ -7,13 +7,21 @@ const DialingContextProvider = ({ children }) => {
   const [dialedNumbers, setDialedNumbers] = useState([]);
 
   const dialNumber = (number) => {
+    if (dialedNumbers.length === 9) {
+      return;
+    }
     setDialedNumbers([...dialedNumbers, number]);
-    console.log(dialedNumbers);
+  };
+
+  const deleteNumber = () => {
+    setDialedNumbers(
+      dialedNumbers.filter((element, dial) => dial < dialedNumbers.length - 1)
+    );
   };
 
   return (
     <DialingContext.Provider
-      value={{ dialingButtons, dialNumber, dialedNumbers }}
+      value={{ dialingButtons, dialNumber, deleteNumber, dialedNumbers }}
     >
       {children}
     </DialingContext.Provider>
