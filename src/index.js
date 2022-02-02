@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 import App from "./App";
+import DialingContextProvider from "./contexts/DialingContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DialingContextProvider>
+      <App />
+    </DialingContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
