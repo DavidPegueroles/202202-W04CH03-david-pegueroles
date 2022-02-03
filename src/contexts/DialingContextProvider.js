@@ -14,7 +14,7 @@ const DialingContextProvider = ({ children }) => {
     } else {
       setAbleToCall(false);
     }
-  }, [ableToCall]);
+  }, [dialedNumbers.length]);
 
   const dialNumber = (number) => {
     if (dialedNumbers.length === 9) {
